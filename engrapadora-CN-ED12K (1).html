@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CN-ED12K — Engrapadora Laparoscópica Lineal Desechable | Channel Med · iBiomed Guatemala</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+:root {
+  --white:   #FFFFFF;
+  --paper:   #F5F4F2;
+  --line:    #DCDAD5;
+  --ink:     #15171A;
+  --steel:   #5B6066;
+  --red:     #C8202B;
+  --red-d:   #971018;
+  --tag:     #1F8A4C;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* ── TOP IDENTIFICATION BAR ── */
+.idbar {
+  background: var(--ink);
+  color: var(--white);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .5rem 5vw;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .68rem; letter-spacing: .04em;
+  flex-wrap: wrap; gap: .4rem;
+}
+.idbar span { color: #8a9098; }
+.idbar strong { color: var(--white); font-weight: 600; }
+.idbar .ce {
+  display: flex; align-items: center; gap: .4rem;
+}
+.ce-badge {
+  border: 1px solid #555; padding: .1rem .4rem;
+  font-weight: 700; letter-spacing: .02em;
+}
+
+/* ── HEADER ── */
+header {
+  border-bottom: 3px solid var(--red);
+  padding: 1.4rem 5vw;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.brand {
+  display: flex; align-items: center; gap: .9rem;
+}
+.brand-mark {
+  width: 42px; height: 42px;
+  background: var(--red);
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 800; font-size: 1.3rem;
+  font-family: 'Archivo Expanded', sans-serif;
+  flex-shrink: 0;
+}
+.brand-name {
+  font-family: 'Archivo Expanded', sans-serif;
+  font-weight: 800; font-size: 1.2rem;
+  letter-spacing: .01em; color: var(--ink);
+  text-transform: uppercase;
+}
+.brand-sub {
+  font-size: .68rem; color: var(--steel);
+  letter-spacing: .06em; text-transform: uppercase;
+  font-weight: 500;
+}
+.distrib {
+  text-align: right; font-size: .76rem; color: var(--steel);
+}
+.distrib strong { color: var(--ink); display: block; font-size: .92rem; }
+
+/* ── HERO ── */
+#hero {
+  padding: 3.5rem 5vw 0;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3rem; align-items: center;
+}
+.hero-eyebrow {
+  display: flex; align-items: center; gap: .7rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .72rem; letter-spacing: .08em;
+  color: var(--red); font-weight: 600; margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+.hero-eyebrow::before { content: ''; width: 1.6rem; height: 2px; background: var(--red); }
+
+h1.hero-title {
+  font-family: 'Archivo Expanded', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.1rem, 3.6vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+h1.hero-title .accent { color: var(--red); }
+
+.hero-cutlen {
+  display: inline-flex; align-items: baseline; gap: .4rem;
+  margin-bottom: 1.4rem;
+}
+.hero-cutlen .num {
+  font-family: 'Archivo Expanded', sans-serif;
+  font-size: 2.6rem; font-weight: 800; color: var(--ink); line-height: 1;
+}
+.hero-cutlen .unit {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .85rem; color: var(--steel); text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.hero-desc {
+  font-size: .92rem; line-height: 1.75; color: var(--steel);
+  max-width: 460px; margin-bottom: 1.6rem;
+}
+
+.feature-pills {
+  display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1.8rem;
+}
+.pill {
+  display: flex; align-items: center; gap: .4rem;
+  border: 1px solid var(--line);
+  padding: .45rem .8rem;
+  font-size: .75rem; font-weight: 500; color: var(--ink);
+  background: var(--paper);
+}
+.pill::before { content: '✓'; color: var(--tag); font-weight: 700; }
+.pill.x::before { content: '✕'; color: var(--red); }
+
+.hero-cta {
+  display: flex; gap: .9rem; flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--red); color: white; text-decoration: none;
+  padding: .85rem 1.7rem; font-weight: 600; font-size: .85rem;
+  letter-spacing: .02em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: .5rem;
+  transition: background .15s;
+}
+.btn-primary:hover { background: var(--red-d); }
+.btn-outline {
+  border: 1px solid var(--ink); color: var(--ink); text-decoration: none;
+  padding: .85rem 1.7rem; font-weight: 600; font-size: .85rem;
+  letter-spacing: .02em; text-transform: uppercase;
+  transition: all .15s;
+}
+.btn-outline:hover { background: var(--ink); color: white; }
+
+.hero-visual {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 2rem;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 320px;
+}
+.hero-visual img { width: 100%; max-width: 460px; object-fit: contain; }
+.hero-visual .corner {
+  position: absolute; width: 18px; height: 18px;
+  border: 2px solid var(--steel); opacity: .5;
+}
+.hero-visual .corner.tl { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+.hero-visual .corner.br { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+
+/* ── INDICATION STRIP ── */
+.strip {
+  background: var(--ink); color: white;
+  margin-top: 3.5rem;
+  padding: 1.1rem 5vw;
+  display: grid; grid-template-columns: 110px 1fr;
+  gap: 1.2rem; align-items: center;
+}
+.strip-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .65rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--red); font-weight: 600;
+}
+.strip p { font-size: .85rem; color: rgba(255,255,255,0.8); line-height: 1.6; }
+
+/* ── SECTION BASE ── */
+.section { padding: 4rem 5vw; }
+.section-head {
+  display: flex; align-items: baseline; gap: 1rem;
+  margin-bottom: 2.2rem;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: .9rem;
+}
+.section-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .8rem; color: var(--red); font-weight: 600;
+}
+h2.section-title {
+  font-family: 'Archivo Expanded', sans-serif;
+  font-weight: 800; font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  text-transform: uppercase; letter-spacing: -.005em;
+}
+
+/* ── TABLE STYLES ── */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); }
+table {
+  width: 100%; border-collapse: collapse;
+  font-size: .82rem;
+}
+thead tr { background: var(--ink); }
+thead th {
+  color: white; text-align: left;
+  padding: .7rem 1rem;
+  font-weight: 600; font-size: .72rem;
+  text-transform: uppercase; letter-spacing: .04em;
+  white-space: nowrap;
+}
+tbody tr { border-bottom: 1px solid var(--line); }
+tbody tr:nth-child(even) { background: var(--paper); }
+tbody td { padding: .65rem 1rem; color: var(--ink); white-space: nowrap; }
+.swatch {
+  display: inline-flex; align-items: center; gap: .4rem;
+}
+.dot { width: 11px; height: 11px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0; }
+
+.device-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.device-grid .table-block:not(:last-child) { margin-bottom: 0; }
+
+/* ── COMPONENT TABS ── */
+.comp-block { margin-bottom: 2.5rem; }
+.comp-block:last-child { margin-bottom: 0; }
+.comp-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .78rem; font-weight: 600;
+  color: var(--ink); margin-bottom: .8rem;
+  display: flex; align-items: center; gap: .6rem;
+}
+.comp-title .n {
+  background: var(--red); color: white;
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .68rem; flex-shrink: 0;
+}
+.comp-remark {
+  font-size: .78rem; color: var(--steel); line-height: 1.6;
+  margin-top: .7rem; padding: .7rem .9rem;
+  background: var(--paper); border-left: 3px solid var(--red);
+}
+
+/* ── ADVANTAGES ── */
+#ventajas { background: var(--paper); }
+.adv-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.adv-card {
+  background: white; border: 1px solid var(--line);
+  padding: 1.7rem;
+  position: relative;
+}
+.adv-card::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 100%; height: 3px; background: var(--red);
+}
+.adv-num {
+  font-family: 'Archivo Expanded', sans-serif;
+  font-size: 1.8rem; font-weight: 800; color: var(--line);
+  line-height: 1; margin-bottom: .6rem;
+}
+.adv-title {
+  font-weight: 700; font-size: .95rem; margin-bottom: .6rem;
+  text-transform: uppercase; letter-spacing: -.005em;
+}
+.adv-text { font-size: .84rem; color: var(--steel); line-height: 1.7; }
+
+/* ── PRODUCT SHOW / FEATURES ── */
+#detalle .feature-list {
+  display: flex; flex-direction: column; gap: 0;
+}
+.feat-row {
+  display: grid; grid-template-columns: 28px 1fr;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.feat-row:first-child { border-top: 1px solid var(--line); }
+.feat-row .dot-marker {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--red); margin-top: .45rem;
+}
+.feat-row .feat-text { font-size: .87rem; line-height: 1.65; color: var(--ink); }
+.feat-row .feat-text strong { color: var(--red-d); }
+
+/* ── CALLOUT BANNER ── */
+.banner {
+  background: var(--red);
+  color: white;
+  padding: .55rem 5vw;
+  display: flex; gap: 2.2rem; align-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .73rem; letter-spacing: .03em;
+  overflow-x: auto; white-space: nowrap;
+  text-transform: uppercase; font-weight: 600;
+}
+.banner span::before { content: '◆ '; opacity: .6; }
+
+/* ── DISTRIBUTOR / FOOTER ── */
+#distribuidor {
+  background: var(--ink); color: white;
+  padding: 3.5rem 5vw;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: center;
+}
+.dist-card-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--red); font-weight: 600; margin-bottom: 1rem;
+}
+.dist-name {
+  font-family: 'Archivo Expanded', sans-serif;
+  font-size: 1.7rem; font-weight: 800;
+  margin-bottom: .3rem; text-transform: uppercase;
+}
+.dist-sub { font-size: .82rem; color: rgba(255,255,255,0.45); margin-bottom: 1.8rem; }
+.dist-contact {
+  display: flex; flex-direction: column; gap: .55rem;
+}
+.dist-contact a {
+  color: white; text-decoration: none;
+  font-size: .9rem; font-weight: 500;
+  display: flex; align-items: center; gap: .6rem;
+}
+.dist-contact a:hover { color: var(--red); }
+.dist-contact span { color: var(--red); font-family: 'IBM Plex Mono', monospace; font-size: .8rem; }
+
+.cert-box {
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 1.8rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; gap: .5rem;
+}
+.cert-ce {
+  font-size: 2.2rem; font-weight: 800; letter-spacing: -.02em;
+}
+.cert-num { font-family: 'IBM Plex Mono', monospace; font-size: .8rem; color: rgba(255,255,255,0.5); }
+.cert-note { font-size: .72rem; color: rgba(255,255,255,0.35); margin-top: .4rem; max-width: 280px; }
+
+footer {
+  background: #07090c; color: rgba(255,255,255,0.3);
+  text-align: center; padding: 1.2rem 5vw;
+  font-size: .72rem; font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: .03em;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 880px) {
+  #hero { grid-template-columns: 1fr; }
+  .device-grid, .adv-grid, #distribuidor { grid-template-columns: 1fr; }
+  .idbar { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ID BAR -->
+<div class="idbar">
+  <div><span>MODELO REF:</span> <strong>CN-ED12K-S / -C / -L</strong></div>
+  <div class="ce"><span class="ce-badge">CE</span> <strong>2292</strong></div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="brand">
+    <div class="brand-mark">C</div>
+    <div>
+      <div class="brand-name">Channel Med</div>
+      <div class="brand-sub">Jiangsu Channel Medical Device Co., Ltd.</div>
+    </div>
+  </div>
+  <div class="distrib">
+    <strong>iBiomed — Inversiones Biomédicas</strong>
+    Distribuidor autorizado · Guatemala
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div>
+    <div class="hero-eyebrow">Engrapadora Endoscópica Lineal Desechable</div>
+    <h1 class="hero-title">Cutting &amp; Stapling<br>de precisión <span class="accent">quirúrgica</span></h1>
+    <div class="hero-cutlen">
+      <span class="num">75</span>
+      <span class="unit">mm<br>cutting length</span>
+    </div>
+    <p class="hero-desc">Indicada para resección, transección y anastomosis de tejido pulmonar, bronquial, gástrico e intestinal — en cirugía abierta o endoscópica.</p>
+    <div class="feature-pills">
+      <div class="pill">Compatible con reload 30/45/60mm</div>
+      <div class="pill">Formación de grapa precisa</div>
+      <div class="pill">Diseño Gecko-Claw</div>
+      <div class="pill x">Menor deslizamiento de tejido</div>
+    </div>
+    <div class="hero-cta">
+      <a href="#especificaciones" class="btn-primary">Ver especificaciones →</a>
+      <a href="#distribuidor" class="btn-outline">Contactar distribuidor</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="corner tl"></div>
+    <div class="corner br"></div>
+    <img src="https://i.imgur.com/0000000.png" alt="Engrapadora laparoscópica CN-ED12K" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='flex'">
+    <div class="fallback" style="display:none; flex-direction:column; align-items:center; gap:.8rem; color:#5B6066; font-family:'IBM Plex Mono',monospace; font-size:.78rem; text-align:center;">
+      <div style="font-size:2.5rem;">⌀12.4mm</div>
+      <div>Imagen de referencia del producto<br>disponible en el brochure original</div>
+    </div>
+  </div>
+</section>
+
+<!-- INDICATION STRIP -->
+<div class="strip">
+  <div class="strip-label">Indicación</div>
+  <p>Indicada para resección, transección y anastomosis de tejidos pulmonares y bronquiales, estómago e intestino, en cirugía abierta o endoscópica.</p>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+  <span>Compatible con reload 30/45/60mm</span>
+  <span>Decreases staple crossing</span>
+  <span>Drop-shaped reload</span>
+  <span>Precise staple formation</span>
+  <span>Gecko Claw-shaped — less tissue slippage</span>
+</div>
+
+<!-- ESPECIFICACIONES -->
+<section id="especificaciones" class="section">
+  <div class="section-head">
+    <div class="section-num">01</div>
+    <h2 class="section-title">Parámetros del dispositivo</h2>
+  </div>
+
+  <div class="table-block" style="margin-bottom: 2.5rem;">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Modelo</th><th>Longitud de camisa (sleeve)</th><th>Diámetro</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">CN-ED12K-S / CN-ED12KT-S</td><td>85</td><td>Φ12.4mm</td></tr>
+          <tr><td class="mono">CN-ED12K-C / CN-ED12KT-C</td><td>155</td><td>Φ12.4mm</td></tr>
+          <tr><td class="mono">CN-ED12K-L / CN-ED12KT-L</td><td>255</td><td>Φ12.4mm</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <div class="section-num">02</div>
+    <h2 class="section-title">Componentes de corte</h2>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-title"><span class="n">1</span>Parámetros para CN-CCR</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Modelo</th><th>Altura de grapa</th><th>Long. de sutura</th><th>Color de reload</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">CN-CCR30-W</td><td>2.0, 2.5, 3.0</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#8B5A2B"></span>Brown</span></td></tr>
+          <tr><td class="mono">CN-CCR30-B</td><td>3.0, 3.5, 4.0</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#7B4F9E"></span>Purple</span></td></tr>
+          <tr><td class="mono">CN-CCR30-G</td><td>4.0, 4.5, 5.0</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#1A1A1A"></span>Black</span></td></tr>
+          <tr><td class="mono">CN-CCR45-W</td><td>2.0, 2.5, 3.0</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#8B5A2B"></span>Brown</span></td></tr>
+          <tr><td class="mono">CN-CCR45-B</td><td>3.0, 3.5, 4.0</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#7B4F9E"></span>Purple</span></td></tr>
+          <tr><td class="mono">CN-CCR45-G</td><td>4.0, 4.5, 5.0</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#1A1A1A"></span>Black</span></td></tr>
+          <tr><td class="mono">CN-CCR60-W</td><td>2.0, 2.5, 3.0</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#8B5A2B"></span>Brown</span></td></tr>
+          <tr><td class="mono">CN-CCR60-B</td><td>3.0, 3.5, 4.0</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#7B4F9E"></span>Purple</span></td></tr>
+          <tr><td class="mono">CN-CCR60-G</td><td>4.0, 4.5, 5.0</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#1A1A1A"></span>Black</span></td></tr>
+          <tr><td class="mono">CN-CCR75-W</td><td>2.0, 2.5, 3.0</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#8B5A2B"></span>Brown</span></td></tr>
+          <tr><td class="mono">CN-CCR75-B</td><td>3.0, 3.5, 4.0</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#7B4F9E"></span>Purple</span></td></tr>
+          <tr><td class="mono">CN-CCR75-G</td><td>4.0, 4.5, 5.0</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#1A1A1A"></span>Black</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comp-remark">Técnica de sujeción Gecko-Claw.</div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-title"><span class="n">2</span>Parámetros para CN-CCRE</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Modelo</th><th>Altura de grapa</th><th>Long. de sutura</th><th>Color de reload</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">CN-CCRE30-W</td><td>2.0, 2.5, 3.0</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#8B5A2B"></span>Brown</span></td></tr>
+          <tr><td class="mono">CN-CCRE30-B</td><td>3.0, 3.5, 4.0</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#7B4F9E"></span>Purple</span></td></tr>
+          <tr><td class="mono">CN-CCRE30-G</td><td>4.0, 4.5, 5.0</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#1A1A1A"></span>Black</span></td></tr>
+          <tr><td class="mono">CN-CCRE45-W</td><td>2.0, 2.5, 3.0</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#8B5A2B"></span>Brown</span></td></tr>
+          <tr><td class="mono">CN-CCRE45-B</td><td>3.0, 3.5, 4.0</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#7B4F9E"></span>Purple</span></td></tr>
+          <tr><td class="mono">CN-CCRE45-G</td><td>4.0, 4.5, 5.0</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#1A1A1A"></span>Black</span></td></tr>
+          <tr><td class="mono">CN-CCRE60-W</td><td>2.0, 2.5, 3.0</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#8B5A2B"></span>Brown</span></td></tr>
+          <tr><td class="mono">CN-CCRE60-B</td><td>3.0, 3.5, 4.0</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#7B4F9E"></span>Purple</span></td></tr>
+          <tr><td class="mono">CN-CCRE60-G</td><td>4.0, 4.5, 5.0</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#1A1A1A"></span>Black</span></td></tr>
+          <tr><td class="mono">CN-CCRE75-W</td><td>2.0, 2.5, 3.0</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#8B5A2B"></span>Brown</span></td></tr>
+          <tr><td class="mono">CN-CCRE75-B</td><td>3.0, 3.5, 4.0</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#7B4F9E"></span>Purple</span></td></tr>
+          <tr><td class="mono">CN-CCRE75-G</td><td>4.0, 4.5, 5.0</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#1A1A1A"></span>Black</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comp-remark">Técnica de sujeción Gecko-Claw.</div>
+  </div>
+
+  <div class="comp-block">
+    <div class="comp-title"><span class="n">3</span>Parámetros para CN-CCRC</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Modelo</th><th>Altura de grapa</th><th>Long. de sutura</th><th>Color de reload</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">CN-CCRC30-W</td><td>2.5</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#FFFFFF;border:1px solid #ccc"></span>White</span></td></tr>
+          <tr><td class="mono">CN-CCRC30-B</td><td>3.5</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#2E6BB8"></span>Blue</span></td></tr>
+          <tr><td class="mono">CN-CCRC30-Y</td><td>4.0</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#E8C400"></span>Yellow</span></td></tr>
+          <tr><td class="mono">CN-CCRC30-G</td><td>4.8</td><td>33</td><td><span class="swatch"><span class="dot" style="background:#2E8B45"></span>Green</span></td></tr>
+          <tr><td class="mono">CN-CCRC45-W</td><td>2.5</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#FFFFFF;border:1px solid #ccc"></span>White</span></td></tr>
+          <tr><td class="mono">CN-CCRC45-B</td><td>3.5</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#2E6BB8"></span>Blue</span></td></tr>
+          <tr><td class="mono">CN-CCRC45-Y</td><td>4.0</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#E8C400"></span>Yellow</span></td></tr>
+          <tr><td class="mono">CN-CCRC45-G</td><td>4.8</td><td>45</td><td><span class="swatch"><span class="dot" style="background:#2E8B45"></span>Green</span></td></tr>
+          <tr><td class="mono">CN-CCRC60-W</td><td>2.5</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#FFFFFF;border:1px solid #ccc"></span>White</span></td></tr>
+          <tr><td class="mono">CN-CCRC60-B</td><td>3.5</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#2E6BB8"></span>Blue</span></td></tr>
+          <tr><td class="mono">CN-CCRC60-Y</td><td>4.0</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#E8C400"></span>Yellow</span></td></tr>
+          <tr><td class="mono">CN-CCRC60-G</td><td>4.8</td><td>61</td><td><span class="swatch"><span class="dot" style="background:#2E8B45"></span>Green</span></td></tr>
+          <tr><td class="mono">CN-CCRC75-B</td><td>3.5</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#2E6BB8"></span>Blue</span></td></tr>
+          <tr><td class="mono">CN-CCRC75-Y</td><td>4.0</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#E8C400"></span>Yellow</span></td></tr>
+          <tr><td class="mono">CN-CCRC75-G</td><td>4.8</td><td>73</td><td><span class="swatch"><span class="dot" style="background:#2E8B45"></span>Green</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comp-remark">Técnica de sujeción Gecko-Claw con diseño Crocodile-Mouth. Los modelos CCRC30/45-W tienen guía metálica fija en forma de pico; los demás usan guía plástica.</div>
+  </div>
+</section>
+
+<!-- VENTAJAS -->
+<section id="ventajas" class="section">
+  <div class="section-head">
+    <div class="section-num">03</div>
+    <h2 class="section-title">Ventajas del cartucho escalonado</h2>
+  </div>
+  <div class="adv-grid">
+    <div class="adv-card">
+      <div class="adv-num">01</div>
+      <div class="adv-title">Sujeción progresiva del tejido</div>
+      <p class="adv-text">El diseño escalonado del cartucho facilita evacuar fluidos de ambos lados durante el cierre y disparo, y comprime el tejido al grosor adecuado para el grapado — reduciendo el daño por compresión sin comprometer la fuerza de sujeción.</p>
+    </div>
+    <div class="adv-card">
+      <div class="adv-num">02</div>
+      <div class="adv-title">Grapas de altura graduada</div>
+      <p class="adv-text">Grapas con alturas desiguales garantizan mejor irrigación sanguínea y cicatrización más rápida, lo que se traduce en mayor adaptabilidad del tejido.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DETALLE / PRODUCT SHOW -->
+<section id="detalle" class="section">
+  <div class="section-head">
+    <div class="section-num">04</div>
+    <h2 class="section-title">Detalle técnico del instrumento</h2>
+  </div>
+  <div class="feature-list">
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Cartucho "Drop-shaped":</strong> asegura una formación precisa de la grapa.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Grapa de titanio importada:</strong> garantiza una mejor anastomosis.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Cortador en forma de "H":</strong> procesado con precisión para un grapado y corte uniforme, proximal y distal.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Sistema de dirección tipo rodillo</strong> con cambio de marcha claro — el instrumento es fácil de manipular.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Componente conectado al eje</strong> sólido y más seguro.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text">Carga y descarga más conveniente de los componentes de corte antideslizantes mediante una perilla.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Seguro de disparo antideslizante:</strong> evita el disparo de un componente vacío.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text">El seguro de disparo previene el disparo de un reload vacío, aumentando la seguridad quirúrgica.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text">Mango de dirección grande, antideslizante y con aislamiento de goma — agarre cómodo y cambios de marcha más claros.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Mango de disparo de cinco pasos</strong> que facilita la operación.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text">Mango ergonómico, antideslizante y con aislamiento de goma para un agarre de disparo más cómodo.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Mango de reseteo arqueado:</strong> hace que restablecer el agarre sea más sencillo.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Técnica de sujeción "Gecko-Claw"</strong> con estructura de soporte superficial — formación de grapa más precisa.</div></div>
+    <div class="feat-row"><div class="dot-marker"></div><div class="feat-text"><strong>Estructura "Crocodile-Mouth"</strong> de sujeción de tejido: minimiza la protrusión y facilita un corte y grapado efectivo.</div></div>
+  </div>
+</section>
+
+<!-- DISTRIBUIDOR -->
+<section id="distribuidor">
+  <div>
+    <div class="dist-card-title">Distribuidor autorizado · Guatemala</div>
+    <div class="dist-name">iBiomed</div>
+    <div class="dist-sub">Inversiones Biomédicas</div>
+    <div class="dist-contact">
+      <a href="tel:+50257487721"><span>TEL</span> (+502) 5748 – 7721</a>
+      <a href="https://www.facebook.com/ibiomedicas" target="_blank"><span>FB / IG</span> @ibiomedicas</a>
+    </div>
+  </div>
+  <div class="cert-box">
+    <div class="cert-ce">CE</div>
+    <div class="cert-num">N.º 2292</div>
+    <div class="cert-note">Jiangsu Channel Medical Device Co., Ltd. — fabricante certificado.</div>
+  </div>
+</section>
+
+<footer>
+  CN-ED12K-S / -C / -L — Disposable Endoscope Linear Cutting Stapler · 75mm Cutting Length · Channel Med
+</footer>
+
+</body>
+</html>
